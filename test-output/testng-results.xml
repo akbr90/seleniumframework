@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41425" started-at="2019-10-26T00:38:34 IST" finished-at="2019-10-26T00:39:15 IST">
+  <suite name="Suite" duration-ms="37308" started-at="2019-10-26T12:46:34 IST" finished-at="2019-10-26T12:47:12 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41425" started-at="2019-10-26T00:38:34 IST" finished-at="2019-10-26T00:39:15 IST">
+    <test name="Test" duration-ms="37308" started-at="2019-10-26T12:46:34 IST" finished-at="2019-10-26T12:47:12 IST">
       <class name="com.akbr.testcases.TestBarCodeReader">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.akbr.testcases.TestBarCodeReader@59906517]" name="setUp" is-config="true" duration-ms="30430" started-at="2019-10-26T00:38:34 IST" finished-at="2019-10-26T00:39:04 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.akbr.testcases.TestBarCodeReader@5bfbf16f]" name="setUp" is-config="true" duration-ms="25122" started-at="2019-10-26T12:46:35 IST" finished-at="2019-10-26T12:47:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testBarCodeReader()[pri:0, instance:com.akbr.testcases.TestBarCodeReader@59906517]" name="testBarCodeReader" duration-ms="10955" started-at="2019-10-26T00:39:04 IST" finished-at="2019-10-26T00:39:15 IST">
+        <test-method status="PASS" signature="testBarCodeReader()[pri:0, instance:com.akbr.testcases.TestBarCodeReader@5bfbf16f]" name="testBarCodeReader" duration-ms="11700" started-at="2019-10-26T12:47:00 IST" finished-at="2019-10-26T12:47:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBarCodeReader -->
       </class> <!-- com.akbr.testcases.TestBarCodeReader -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

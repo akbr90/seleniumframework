@@ -16,7 +16,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Reporting extends TestListenerAdapter
@@ -31,7 +30,7 @@ public class Reporting extends TestListenerAdapter
 	{
 		//String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
 		String repName="TestReport.html";
-		
+				
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/HTMLReport/"+repName);//specify location of the report
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
 		
@@ -42,7 +41,7 @@ public class Reporting extends TestListenerAdapter
 		extent.setSystemInfo("Environemnt","QA");
 		extent.setSystemInfo("user","akbar");
 		
-		htmlReporter.config().setDocumentTitle("WWW OFFICE DEPOT"); // Tile of report
+		htmlReporter.config().setDocumentTitle("SELNIUM AKBAR'S FRAMEWORK"); // Tile of report
 		htmlReporter.config().setReportName("Functional Test Automation Report"); // name of the report
 		htmlReporter.config().setTheme(Theme.DARK);
 	}
@@ -60,7 +59,7 @@ public class Reporting extends TestListenerAdapter
 		logger=extent.createTest(tr.getName()); // create new entry in th report
 		logger.log(Status.FAIL,MarkupHelper.createLabel(tr.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
 		
-		String screenshotPath=System.getProperty("user.dir")+"\\Screenshots\\"+tr.getName()+".png";
+		String screenshotPath=System.getProperty("user.dir")+"\\screenshots\\"+tr.getName()+".png";
 		
 		File f = new File(screenshotPath); 
 		
