@@ -51,7 +51,7 @@ public class BaseTest {
 			prop= new Properties();
 			FileInputStream is;
 
-			is = new FileInputStream("C:\\MyEclipseWorkSpace\\SeleniumFrameWork\\Configuration\\config.properties");
+			is = new FileInputStream(System.getProperty("user.dir")+"\\Configuration\\config.properties");
 			try {
 				prop.load(is);
 			} catch (IOException e) {
