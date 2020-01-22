@@ -355,17 +355,15 @@ public class BaseTest {
 
 	}
 
-	public static WebElement getDynamicObject(WebElement loc, String string) {
+	public static By getDynamicObject(By loc, String string) {
+		
 		String locator = loc.toString();
-		System.out.println(locator);
 		if(locator.contains("$Dynamic"))
 		{
 			locator = locator.replace("$Dynamic", string);
 			if (locator.contains("By.xpath")) {
 				locator = locator.replace("By.xpath: ", "");
-				System.out.println(locator);
-				loc = (WebElement) By.xpath(locator);
-				System.out.println(loc);
+				loc = By.xpath(locator);
 			}
 		}
 		return loc;
@@ -388,7 +386,7 @@ public class BaseTest {
 	}
 	
 	
-	public static String testBarCodeReader(By loc) {
+	public static String testBarAndQRCodeReader(By loc) {
 		
 		By qrCodeReader=loc;
 		WaitForElementToAppear();
