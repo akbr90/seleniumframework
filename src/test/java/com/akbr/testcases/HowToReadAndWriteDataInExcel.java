@@ -1,10 +1,13 @@
 package com.akbr.testcases;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.akbr.base.BaseTest;
@@ -28,7 +31,7 @@ public class HowToReadAndWriteDataInExcel extends BaseTest{
 
 	@Test
 	public void readAndWriteDataInExcel() throws IOException{
-		
+
 		String path=System.getProperty("user.dir")+"/src/main/TestData/sagarTestFile.xlsx";
 
 		int rownum=XLUtils.getRowCount(path, "Sheet1");
@@ -44,14 +47,14 @@ public class HowToReadAndWriteDataInExcel extends BaseTest{
 			String name= logindata[i][LoginID];
 			String password= logindata[i][pass];
 			String age= logindata[i][Age];
-			
-			
+
+
 			System.out.println("Name : "+name+", password : "+password+", Age : "+age);
-				
-			
+
+
 
 		}
-		//writeDataToExcel(logindata);
+		writeDataToExcel(logindata);
 
 
 	}
@@ -62,8 +65,8 @@ public class HowToReadAndWriteDataInExcel extends BaseTest{
 		//closeBrowser();
 
 	}
-	
-	
+
+
 	String [][] getDataFromExcel() throws IOException
 	{
 		String path=System.getProperty("user.dir")+"/src/main/TestData/sagarTestFile.xlsx";
@@ -78,31 +81,45 @@ public class HowToReadAndWriteDataInExcel extends BaseTest{
 			for(int j=0;j<colcount;j++)
 			{
 				logindata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-				
+
 			}
 
 		}
 		return logindata;
 	}
-	
-	
+
+
 	void writeDataToExcel(String[][] logindata) throws IOException
 	{
-		String path=System.getProperty("user.dir")+"/test-output/WriteDataToExcel.xlsx";
+		String path=System.getProperty("user.dir")+"/test-output/MyExcel.xlsx";
+
+		FileOutputStream fo;
+		fo=new FileOutputStream(path);
+		XSSFWorkbook wb;
+		wb=new XSSFWorkbook();
+		XSSFSheet ws;
+		ws=wb.createSheet("MyData");
+		XSSFRow row;
+
+
 
 		int rownum=3;
 		int colcount=3;
 
-		for(int i=1;i<rownum;i++)
+		for(int i=0;i<rownum;i++)
 		{
-			for(int j=1;j<colcount;j++)
+			row=ws.createRow(i);
+			for(int j=0;j<colcount;j++)
 			{
-				System.out.println(logindata[i-1][j]);
-				XLUtils.setCellData(path,"Sheet1",i,j,logindata[i-1][j]);
-				
+				System.out.println(logindata[i][j]);
+				//XLUtils.setCellData(path,"Sheet1",i,j,logindata[i][j]);
+				row.createCell(j).setCellValue(logindata[i][j]);
+
 			}
 
 		}
+		
+		XLUtils.closeFile(path);
 	}
 
 

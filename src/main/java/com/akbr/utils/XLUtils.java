@@ -2,6 +2,7 @@ package com.akbr.utils;
 
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -83,6 +84,16 @@ public class XLUtils {
 		wb.close();
 		fi.close();
 		fo.close();
+	}
+	
+	public static void closeFile(String xfile) throws IOException {
+		
+		fo=new FileOutputStream(xfile);
+		wb.write(fo);		
+		wb.close();
+		fi.close();
+		fo.close();
+		
 	}
 	
 	
