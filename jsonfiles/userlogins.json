@@ -1,0 +1,16 @@
+{
+	"userlogins": [
+		{
+			"user": "akbr@yopmail.com",
+			"password": "Tester#123"
+		},
+		{
+			"user": "norders@od.com",
+			"password": "Tester#123"
+		},
+		{
+			"user": "Tester@yopmail.com",
+			"password": "Tester#123"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.akbr.testngpractice.TestNGAnnotationTest1">
+
+				<methods>
+					<exclude name="WebLoginCarLoan" /><!-- TC excluded from execution -->
+					<include name="Mobile.*"/>  	<!-- TCs will be included for execution having Mobile keyword in name -->
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

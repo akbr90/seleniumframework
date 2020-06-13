@@ -1,0 +1,19 @@
+{
+	"employees": [
+		{
+			"id": 1,
+			"name": "Admin",
+			"location": "USA"
+		},
+		{
+			"id": 2,
+			"name": "User",
+			"location": "USA"
+		},
+		{
+			"id": 3,
+			"name": "User2",
+			"location": "USA"
+		}
+	]
+}
