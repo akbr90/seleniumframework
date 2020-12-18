@@ -11,12 +11,12 @@ public class After_Groups {
 		System.out.println("This method will be executed after the execution of IT Department group");  
 	}  
 	@Test  
-	public void testcase1()  
+	public void testcase2()  
 	{  
 		System.out.println("HR");  
 	}  
 	@Test(groups= {"IT Department"})  
-	public void testcase2()  
+	public void testcase1()  
 	{  
 		System.out.println("Software Developer");  
 	}  

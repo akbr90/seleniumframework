@@ -22,7 +22,7 @@ import com.akbr.base.BaseTest;
  * @author AKBAR.
  *         Created May 17, 2020.
  */
-public class DateInputFromJson extends BaseTest {
+public class DataInputFromJson extends BaseTest {
 
 	/**
 	 * TODO Put here a description of what this method does.

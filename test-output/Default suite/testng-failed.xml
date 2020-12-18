@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyLogin" invocation-numbers="1"/>
+          <include name="verifyLogin" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- com.akbr.json.DateInputFromJson -->
     </classes>

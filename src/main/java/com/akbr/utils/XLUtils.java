@@ -86,9 +86,9 @@ public class XLUtils {
 		fo.close();
 	}
 	
-	public static void closeFile(String xfile) throws IOException {
+	public static void closeFile(String xlfile) throws IOException {
 		
-		fo=new FileOutputStream(xfile);
+		fo=new FileOutputStream(xlfile);
 		wb.write(fo);		
 		wb.close();
 		fi.close();

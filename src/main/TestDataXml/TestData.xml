@@ -1,0 +1,9 @@
+<Credential>
+	<User>akbr90</User>
+	<Password>Tester#123</Password>
+	<Card>4111111111111111</Card>
+	<Pin>
+		<pin1>6780</pin1>
+		<pin2>7680</pin2>
+	</Pin>
+</Credential>
